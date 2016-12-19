@@ -13,20 +13,20 @@ var promoSchema = new Schema({
 
 	    type: String,
 	    required: true,
-	    unique: false
+	    // unique: false
     },
     description:{
 
         type:String,
         required:true,
-        unique:false
+        // unique:false
 
     },
     image:{
 
         type: String,
         required:true,
-        unique:false
+        // unique:false
     
     },
     label:{
@@ -34,13 +34,13 @@ var promoSchema = new Schema({
         type: String,
         default: "",
         required:true,
-        unique:false
+        // unique:false
     },
     price:{
 
         type: Currency ,
         required:true,
-        unique:false
+        // unique:false
 
     },
 

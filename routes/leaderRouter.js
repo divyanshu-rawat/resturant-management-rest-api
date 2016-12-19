@@ -4,7 +4,8 @@ var
   express = require('express'),
   bodyParser = require('body-parser');
 
-
+var mongoose = require('mongoose');
+var leaderships = require('../models/leadership');
 
 var leaderRouter = express.Router();
 
@@ -12,13 +13,23 @@ leaderRouter.use(bodyParser.json());
 
 leaderRouter.route('/')
 
-  .all(function(req,res,next) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    next();
-  })
+  // .all(function(req,res,next) {
+  //   res.writeHead(200, { 'Content-Type': 'text/plain' });
+  //   next();
+  // })
 
   .get(function(req,res,next){
-    res.end('Will send all the leaders to you!');
+    // res.end('Will send all the leaders to you!');
+
+    leaderships.find({},function (err,promotion) {
+        
+          if(err) throw err;
+          
+          res.json(promotion);
+        
+        });
+
+
   })
 
   .post(function(req, res, next){
