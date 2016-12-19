@@ -24,7 +24,7 @@ leaderRouter.route('/')
     leaderships.find({},function (err,promotion) {
         
           if(err) throw err;
-          
+
           res.json(promotion);
         
         });
@@ -33,11 +33,37 @@ leaderRouter.route('/')
   })
 
   .post(function(req, res, next){
-    res.end('Will add the leader: ' + req.body.name + ' with details: ' + req.body.description);
+    // res.end('Will add the leader: ' + req.body.name + ' with details: ' + req.body.description);
+
+
+    leaderships.create(req.body,function (err,leadership) {
+      
+        if(err) throw err;
+        console.log('leadership Created !!');
+
+        var id = leadership._id;
+
+
+        res.writeHead(200, {
+            'Content-Type': 'text/plain'
+        });
+
+        res.end('Added the leadership with id: ' + id);
+
+    });
+
   })
 
   .delete(function(req, res, next){
-    res.end('Deleting all leaders');
+    // res.end('Deleting all leaders');
+
+     leaderships.remove({}, function (err, resp) {
+
+        if (err) throw err;
+        res.json(resp);
+    });
+
+
   });
 
   
