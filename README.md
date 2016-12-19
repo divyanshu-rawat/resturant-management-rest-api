@@ -45,7 +45,7 @@
 
 ### Sample Data (db.json)
 
-*  You can use the data for all the dishes,promotions and leadership provided in the db.json file .
+*  You can use the data for all the Routes dishes,promotions and leadership provided in the db.json file .
 
 ### Example 
 
