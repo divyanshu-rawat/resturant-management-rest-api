@@ -10,9 +10,19 @@
 
 * Cd into that root folder you just cloned locally.
 
-* Open terminal in the current folder and type node app.js 
+* Open terminal in the current folder and to install all dependencies type 
 
-* This will start a server at http://localhost:3001
+```javascript
+   npm install 
+```
+
+* Now typing 
+
+```javascript
+   npm start 
+```
+
+* will start a server !
 
 ### DB Used (MongoDB)
 
