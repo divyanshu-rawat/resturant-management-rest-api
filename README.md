@@ -15,7 +15,7 @@
 
 ### Live Application
 
-[![Live Demo Here](https://resturantapplication.herokuapp.com)
+[![Live Demo Here](https://resturantapplication.herokuapp.com)]
 
 ##
 
